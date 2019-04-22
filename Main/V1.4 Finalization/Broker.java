@@ -95,48 +95,53 @@ public class Broker {
 	 */
 	public void attachBuyer(String ID, String keywords) {
 		//begin
-		ArrayList<String> keyword = utility.parseKeywords(keywords);
-		// Check if there is already a buyer
-		boolean hasBuyer = false;
-		if(buyerList.size() == 0){
-			Buyer nBuyer = new Buyer();
-			nBuyer.subscribe(ID, keyword);
-			buyerList.add(nBuyer);
+		if(keywords.contains(" ")){
+
 		}
 		else{
-			// Check if the buyer is already there
-			for(int i = 0; i < buyerList.size(); i++){
-				if(buyerList.get(i).buyerID.equals(ID)){
-					hasBuyer = true;
-				}
-			}
-			if(hasBuyer){
-				//If there is already a buyer then just add to the sub list
-				for(int i = 0; i < buyerList.size(); i++){
-					if(buyerList.get(i).buyerID.equals(ID)){ // If it is the buyer then check if there is already the word there
-						boolean isSubbed = false;
-						for(int k = 0; k < keyword.size(); k++){ // go through all given words
-							for(int j = 0; j < buyerList.get(i).subList.size(); j++){
-								if(buyerList.get(i).subList.get(j).toUpperCase().equals(keyword.get(k).toUpperCase())){
-									isSubbed = true;
-								}
-							}
-						}
-						if(isSubbed){
-
-						}
-						else{
-							buyerList.get(i).subscribe(ID, keyword);
-						}
-					}
-				}
-			}
-			else{
+			ArrayList<String> keyword = utility.parseKeywords(keywords);
+			// Check if there is already a buyer
+			boolean hasBuyer = false;
+			if(buyerList.size() == 0){
 				Buyer nBuyer = new Buyer();
 				nBuyer.subscribe(ID, keyword);
 				buyerList.add(nBuyer);
 			}
+			else{
+				// Check if the buyer is already there
+				for(int i = 0; i < buyerList.size(); i++){
+					if(buyerList.get(i).buyerID.equals(ID)){
+						hasBuyer = true;
+					}
+				}
+				if(hasBuyer){
+					//If there is already a buyer then just add to the sub list
+					for(int i = 0; i < buyerList.size(); i++){
+						if(buyerList.get(i).buyerID.equals(ID)){ // If it is the buyer then check if there is already the word there
+							boolean isSubbed = false;
+							for(int k = 0; k < keyword.size(); k++){ // go through all given words
+								for(int j = 0; j < buyerList.get(i).subList.size(); j++){
+									if(buyerList.get(i).subList.get(j).toUpperCase().equals(keyword.get(k).toUpperCase())){
+										isSubbed = true;
+									}
+								}
+							}
+							if(isSubbed){
+
+							}
+							else{
+								buyerList.get(i).subscribe(ID, keyword);
+							}
+						}
+					}
+				}
+				else{
+					Buyer nBuyer = new Buyer();
+					nBuyer.subscribe(ID, keyword);
+					buyerList.add(nBuyer);
+				}
 		}	
+		}
 		//end
 	}
 
@@ -220,8 +225,8 @@ public class Broker {
 					+": A new listing named " + item.getTitle() 
 					+" was just added to yaBe by " + item.getSellerID()
 					+ "! The item matches your keyword(s) " + buyerWords + ". "
-					+ "It is for sale at $" + item.getPrice();
-					System.out.println(rString);
+					+ "It is for sale at $" + item.getPrice() + ".";
+					//System.out.println(rString);
 					buyerWords = "";
 				}
 			}

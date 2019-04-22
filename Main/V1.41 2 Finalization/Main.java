@@ -4,6 +4,10 @@ import java.lang.Object;
 import java.util.ArrayList;
 public class Main {
 
+	public static Buyer buyer = new Buyer();
+
+	public static Seller seller = new Seller();
+
 	public static Broker broker = new Broker();
 
 	public static void main(String[] args) throws FileNotFoundException, IOException{
@@ -29,6 +33,26 @@ public class Main {
 				case("PUBLISH LISTING"):
 					// 1 In: Keywords
 					String keywords = currentLine.next();
+					
+					// Turn keywords into char
+					/*
+					char ch = ' ';
+					for(int k = 0; k < keywords.length(); k++){
+						ch += keywords.charAt(k);
+					}
+					System.out.println(ch);*/
+					// Check if keywords has any special characters
+					boolean isNotKey = false;
+					for(int i = 0; i < keywords.length(); i++){
+						char ch = keywords.charAt(i);
+						if(Chacter.isLetter(ch) || ch.isDigit() || ch.is("_") || ch.is("-")){
+
+						}
+						
+						System.out.println(keywords.charAt(i).isLetter());
+					}
+					//
+					
 					// 2 In: Seller ID
 					String sellerID = currentLine.next();
 					// 3 In: cost

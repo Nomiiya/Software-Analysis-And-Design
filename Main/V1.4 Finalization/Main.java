@@ -4,6 +4,10 @@ import java.lang.Object;
 import java.util.ArrayList;
 public class Main {
 
+	public static Buyer buyer = new Buyer();
+
+	public static Seller seller = new Seller();
+
 	public static Broker broker = new Broker();
 
 	public static void main(String[] args) throws FileNotFoundException, IOException{

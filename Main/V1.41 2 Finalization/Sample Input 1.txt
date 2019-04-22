@@ -1,0 +1,3 @@
+subscribe,Niko_Bellic,t-shirt
+publish listing,green t-shirt,Modo,35.99,fancy
+publish listing,green t-shirt,Modo,27.99,on sale for limited time!
