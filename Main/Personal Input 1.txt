@@ -1,0 +1,5 @@
+subscribe,dosAmigos,shoes
+publish listing,Red Tennis Shoes,akan512,115.50,good for amatures and pros alike!
+unsubscribe,dosAmigos,shoes
+publish listing,Red Tennis Shoes,akan512,115.50,good for amatures and pros alike!
+publish listing,Shoes,akan5122,115.50,good for amatures and pros alike!

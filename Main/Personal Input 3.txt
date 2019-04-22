@@ -1,0 +1,2 @@
+subscribe,dosAmigos,shoes
+unsubscribe,dosAmigos,gloves
