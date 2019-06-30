@@ -1,3 +1,0 @@
-subscribe,P3,Ybox
-subscribe,P3,One
-publish listing,Ybox One,MacrohardOfficial,499.99,next gen console

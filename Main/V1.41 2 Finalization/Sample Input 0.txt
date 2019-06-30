@@ -1,6 +1,0 @@
-publish listing,Red Tennis Shoes,akan512,115.50,good for amatures and pros alike!
-publish listing,Banana iWac Pro,bananaOfficial,750.0,2017 model with 8 core processors
-subscribe,dosAmigos,shoes
-publish listing,tennisShoes,Kelly Johnson,50,
-unsubscribe,dosAmigos,shoes
-publish listing,White Tennis Shoes,56.90,akan512,very white
